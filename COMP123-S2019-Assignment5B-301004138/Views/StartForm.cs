@@ -37,5 +37,11 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             Program.Forms[FormName.SELECT_FORM].Show();
             this.Hide();
         }
+
+        private void LoadSavedButton_Click(object sender, EventArgs e)
+        {
+            Program.Forms[FormName.PRODUCT_INFO_FORM].Show();
+            this.Hide();
+        }
     }
 }

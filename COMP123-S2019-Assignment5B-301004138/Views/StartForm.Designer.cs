@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.StartOrderButton = new System.Windows.Forms.Button();
@@ -76,6 +77,7 @@
             this.LoadSavedButton.TabIndex = 2;
             this.LoadSavedButton.Text = "Open a Saved Order";
             this.LoadSavedButton.UseVisualStyleBackColor = true;
+            this.LoadSavedButton.Click += new System.EventHandler(this.LoadSavedButton_Click);
             // 
             // ExitOrderButton
             // 
@@ -101,7 +103,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to Dollar Computer!";

@@ -11,12 +11,19 @@ namespace COMP123_S2019_Assignment5B_301004138
     public static class Program
     {
         public static Dictionary<FormName, Form> Forms;
+        public static Product product;
 
         /// <summary>
         /// Name: Abdul Moeed Saqib
         /// Student ID: 301004138
         /// Date last Modified: August 2nd, 2019
         /// Program description: Dollar Computers allows you to order different kinds of Computer like laptops or desktops.
+        /// 
+        /// RevisionHistory:
+        /// 1: created splash screen and created forms like StartForm, SelectForm, ProductInfoForm, OrderForm and AboutForm
+        /// 2: added NextButton and Cancelbutton
+        /// 3: created DataGridView and Use the Entity Framework to connect to the Database named DollarComputers
+        /// 4: created Entity data model
         /// </summary>
         [STAThread]
         static void Main()
@@ -31,6 +38,7 @@ namespace COMP123_S2019_Assignment5B_301004138
             Forms.Add(FormName.PRODUCT_INFO_FORM, new ProductInfoForm());
             Forms.Add(FormName.ORDER_FORM, new OrderForm());
             Forms.Add(FormName.ABOUT_FORM, new AboutForm());
+            product = new Product();
 
             Application.Run(Forms[FormName.SPLASH_FORM]);
         }

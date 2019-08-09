@@ -36,7 +36,7 @@
             this.SelectFormLineShape = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.ComputerHardwareListLabel = new System.Windows.Forms.Label();
             this.SelectionLabel = new System.Windows.Forms.Label();
-            this.SelectionDataLabel = new System.Windows.Forms.Label();
+            this.SelectionTextBox = new System.Windows.Forms.TextBox();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,7 +116,7 @@
             this.powerDataGridViewTextBoxColumn,
             this.webcamDataGridViewTextBoxColumn});
             this.ProductDataGridView.DataSource = this.productBindingSource;
-            this.ProductDataGridView.Location = new System.Drawing.Point(13, 83);
+            this.ProductDataGridView.Location = new System.Drawing.Point(13, 106);
             this.ProductDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ProductDataGridView.MultiSelect = false;
             this.ProductDataGridView.Name = "ProductDataGridView";
@@ -124,6 +124,7 @@
             this.ProductDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ProductDataGridView.Size = new System.Drawing.Size(982, 494);
             this.ProductDataGridView.TabIndex = 0;
+            this.ProductDataGridView.SelectionChanged += new System.EventHandler(this.ProductDataGridView_SelectionChanged);
             // 
             // CancelButton
             // 
@@ -163,15 +164,15 @@
             this.SelectFormLineShape.Name = "SelectFormLineShape";
             this.SelectFormLineShape.X1 = 2;
             this.SelectFormLineShape.X2 = 1007;
-            this.SelectFormLineShape.Y1 = 69;
-            this.SelectFormLineShape.Y2 = 70;
+            this.SelectFormLineShape.Y1 = 79;
+            this.SelectFormLineShape.Y2 = 80;
             // 
             // ComputerHardwareListLabel
             // 
             this.ComputerHardwareListLabel.BackColor = System.Drawing.Color.White;
             this.ComputerHardwareListLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ComputerHardwareListLabel.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComputerHardwareListLabel.Location = new System.Drawing.Point(12, 24);
+            this.ComputerHardwareListLabel.Location = new System.Drawing.Point(12, 23);
             this.ComputerHardwareListLabel.Name = "ComputerHardwareListLabel";
             this.ComputerHardwareListLabel.Size = new System.Drawing.Size(306, 34);
             this.ComputerHardwareListLabel.TabIndex = 3;
@@ -188,16 +189,16 @@
             this.SelectionLabel.Text = "Your Selection";
             this.SelectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SelectionDataLabel
+            // SelectionTextBox
             // 
-            this.SelectionDataLabel.BackColor = System.Drawing.Color.White;
-            this.SelectionDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SelectionDataLabel.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectionDataLabel.Location = new System.Drawing.Point(178, 672);
-            this.SelectionDataLabel.Name = "SelectionDataLabel";
-            this.SelectionDataLabel.Size = new System.Drawing.Size(528, 34);
-            this.SelectionDataLabel.TabIndex = 3;
-            this.SelectionDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SelectionTextBox.BackColor = System.Drawing.Color.White;
+            this.SelectionTextBox.Enabled = false;
+            this.SelectionTextBox.ForeColor = System.Drawing.Color.Black;
+            this.SelectionTextBox.Location = new System.Drawing.Point(192, 677);
+            this.SelectionTextBox.Name = "SelectionTextBox";
+            this.SelectionTextBox.ReadOnly = true;
+            this.SelectionTextBox.Size = new System.Drawing.Size(526, 26);
+            this.SelectionTextBox.TabIndex = 5;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -457,7 +458,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.ControlBox = false;
-            this.Controls.Add(this.SelectionDataLabel);
+            this.Controls.Add(this.SelectionTextBox);
             this.Controls.Add(this.SelectionLabel);
             this.Controls.Add(this.ComputerHardwareListLabel);
             this.Controls.Add(this.NextButton);
@@ -474,6 +475,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -518,7 +520,7 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape SelectFormLineShape;
         private System.Windows.Forms.Label ComputerHardwareListLabel;
         private System.Windows.Forms.Label SelectionLabel;
-        private System.Windows.Forms.Label SelectionDataLabel;
+        private System.Windows.Forms.TextBox SelectionTextBox;
     }
 }
 

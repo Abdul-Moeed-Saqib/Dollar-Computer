@@ -41,5 +41,25 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
                 Application.Exit();
             }
         }
+
+        private void ProductInfoForm_Load(object sender, EventArgs e)
+        {
+            Program.product.productID = short.Parse(ProductIDDataLabel.Text);
+            Program.product.cost = decimal.Parse(CostDataLabel.Text);
+            Program.product.manufacturer = ManufacturerDataLabel.Text;
+            Program.product.model = ModelDataLabel.Text;
+            Program.product.condition = ConditionDataLabel.Text;
+            Program.product.platform = PlatformDataLabel.Text;
+            Program.product.OS = OSDataLabel.Text;
+            Program.product.RAM_size = MemoryDataLabel.Text;
+            Program.product.screensize = LCDSizeDataLabel.Text;
+            Program.product.HDD_size = HDDDataLabel.Text;
+            Program.product.CPU_brand = CPUBrandDataLabel.Text;
+            Program.product.CPU_number = CPUNumberDataLabel.Text;
+            Program.product.GPU_Type = GPUTypeDataLabel.Text;
+            Program.product.CPU_type = CPUTypeDataLabel.Text;
+            Program.product.CPU_speed = CPUSpeedDataLabel.Text;
+            Program.product.webcam = WebCamDataLabel.Text;
+        }
     }
 }
