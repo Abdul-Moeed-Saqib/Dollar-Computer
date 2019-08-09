@@ -44,22 +44,22 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
 
         private void ProductInfoForm_Load(object sender, EventArgs e)
         {
-            Program.product.productID = short.Parse(ProductIDDataLabel.Text);
-            Program.product.cost = decimal.Parse(CostDataLabel.Text);
-            Program.product.manufacturer = ManufacturerDataLabel.Text;
-            Program.product.model = ModelDataLabel.Text;
-            Program.product.condition = ConditionDataLabel.Text;
-            Program.product.platform = PlatformDataLabel.Text;
-            Program.product.OS = OSDataLabel.Text;
-            Program.product.RAM_size = MemoryDataLabel.Text;
-            Program.product.screensize = LCDSizeDataLabel.Text;
-            Program.product.HDD_size = HDDDataLabel.Text;
-            Program.product.CPU_brand = CPUBrandDataLabel.Text;
-            Program.product.CPU_number = CPUNumberDataLabel.Text;
-            Program.product.GPU_Type = GPUTypeDataLabel.Text;
-            Program.product.CPU_type = CPUTypeDataLabel.Text;
-            Program.product.CPU_speed = CPUSpeedDataLabel.Text;
-            Program.product.webcam = WebCamDataLabel.Text;
+            ProductIDDataLabel.Text = Program.product.productID.ToString();
+            CostDataLabel.Text = Program.product.cost.ToString();
+            ManufacturerDataLabel.Text = Program.product.manufacturer.ToString();
+            ModelDataLabel.Text = Program.product.model.ToString();
+            ConditionDataLabel.Text = Program.product.condition.ToString();
+            PlatformDataLabel.Text = Program.product.platform.ToString();
+            OSDataLabel.Text = Program.product.OS.ToString();
+            MemoryDataLabel.Text = Program.product.RAM_size.ToString();
+            LCDSizeDataLabel.Text = Program.product.screensize.ToString();
+            HDDDataLabel.Text = Program.product.HDD_size.ToString();
+            CPUBrandDataLabel.Text = Program.product.CPU_brand;
+            CPUNumberDataLabel.Text = Program.product.CPU_number;
+            GPUTypeDataLabel.Text = Program.product.GPU_Type;
+            CPUTypeDataLabel.Text = Program.product.CPU_type;
+            CPUSpeedDataLabel.Text = Program.product.CPU_speed;
+            WebCamDataLabel.Text = Program.product.webcam;
         }
     }
 }
