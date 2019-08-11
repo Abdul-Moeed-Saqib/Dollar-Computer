@@ -73,13 +73,7 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
 
             //rows[rowIndex].Selected = false;
 
-            string outputString = string.Empty;
-            for (int i = 0; i < columnCount; i++)
-            {
-                outputString += cells[i].Value.ToString() + ", ";
-            }
-
-            SelectionTextBox.Text = outputString;
+            SelectedData(columnCount, cells);
 
             Program.product.productID = short.Parse(cells[0].Value.ToString());
             Program.product.cost = decimal.Parse(cells[1].Value.ToString());
@@ -97,6 +91,18 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             Program.product.CPU_type = cells[11].Value.ToString();
             Program.product.CPU_speed = cells[12].Value.ToString();
             Program.product.webcam = cells[30].Value.ToString();
+        }
+
+        private void SelectedData(int columnCount, DataGridViewCellCollection cells)
+        {
+            string outputString = string.Empty;
+            
+            for (int i = 0; i < columnCount; i++)
+            {
+                outputString += cells[i].Value.ToString()+ ", ";
+            }
+
+            SelectionTextBox.Text = outputString;
         }
     }
 }

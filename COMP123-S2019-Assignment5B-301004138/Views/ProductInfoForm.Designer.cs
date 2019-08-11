@@ -37,9 +37,9 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.selectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.ProductIDLabel = new System.Windows.Forms.Label();
             this.ProductIDDataLabel = new System.Windows.Forms.Label();
             this.ConditionLabel = new System.Windows.Forms.Label();
@@ -76,6 +76,10 @@
             this.MemoryDataLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.ProductOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.ProductSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.SelectAnotherProductButton = new System.Windows.Forms.Button();
+            this.SelectConfirmLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.TechSpecsGroupBox.SuspendLayout();
@@ -110,13 +114,14 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -124,35 +129,31 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator3,
             this.toolStripSeparator4,
-            this.selectToolStripMenuItem});
+            this.selectToolStripMenuItem,
+            this.toolStripSeparator3});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "&Edit";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(233, 6);
             // 
             // toolStripSeparator4
             // 
@@ -165,6 +166,12 @@
             this.selectToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.selectToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.selectToolStripMenuItem.Text = "Se&lect Another Product";
+            this.selectToolStripMenuItem.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(233, 6);
             // 
             // ProductIDLabel
             // 
@@ -560,7 +567,7 @@
             // CancelButton
             // 
             this.CancelButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButton.Location = new System.Drawing.Point(706, 663);
+            this.CancelButton.Location = new System.Drawing.Point(715, 663);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(112, 54);
             this.CancelButton.TabIndex = 4;
@@ -568,12 +575,38 @@
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // ProductOpenFileDialog
+            // 
+            this.ProductOpenFileDialog.FileName = "openFileDialog1";
+            // 
+            // SelectAnotherProductButton
+            // 
+            this.SelectAnotherProductButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectAnotherProductButton.Location = new System.Drawing.Point(444, 663);
+            this.SelectAnotherProductButton.Name = "SelectAnotherProductButton";
+            this.SelectAnotherProductButton.Size = new System.Drawing.Size(229, 54);
+            this.SelectAnotherProductButton.TabIndex = 4;
+            this.SelectAnotherProductButton.Text = "Select Another Product";
+            this.SelectAnotherProductButton.UseVisualStyleBackColor = true;
+            this.SelectAnotherProductButton.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
+            // 
+            // SelectConfirmLabel
+            // 
+            this.SelectConfirmLabel.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.SelectConfirmLabel.Location = new System.Drawing.Point(24, 680);
+            this.SelectConfirmLabel.Name = "SelectConfirmLabel";
+            this.SelectConfirmLabel.Size = new System.Drawing.Size(336, 21);
+            this.SelectConfirmLabel.TabIndex = 1;
+            this.SelectConfirmLabel.Text = "Click Next To Confirm Your Selection";
+            this.SelectConfirmLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.ControlBox = false;
+            this.Controls.Add(this.SelectAnotherProductButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.TechSpecsGroupBox);
@@ -583,6 +616,7 @@
             this.Controls.Add(this.ConditionDataLabel);
             this.Controls.Add(this.ConditionLabel);
             this.Controls.Add(this.ProductIDDataLabel);
+            this.Controls.Add(this.SelectConfirmLabel);
             this.Controls.Add(this.ProductIDLabel);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -651,5 +685,9 @@
         private System.Windows.Forms.Label MemoryDataLabel;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.OpenFileDialog ProductOpenFileDialog;
+        private System.Windows.Forms.SaveFileDialog ProductSaveFileDialog;
+        private System.Windows.Forms.Button SelectAnotherProductButton;
+        private System.Windows.Forms.Label SelectConfirmLabel;
     }
 }

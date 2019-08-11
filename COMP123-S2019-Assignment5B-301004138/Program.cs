@@ -24,6 +24,7 @@ namespace COMP123_S2019_Assignment5B_301004138
         /// 2: added NextButton and Cancelbutton
         /// 3: created DataGridView and Use the Entity Framework to connect to the Database named DollarComputers
         /// 4: created Entity data model
+        /// 5: added SaveFileDialog to save file and OpenFileDialog to the ProductInfoForm to save the data that customer choosed. Also added OpenFileDialog to the StartForm
         /// </summary>
         [STAThread]
         static void Main()
