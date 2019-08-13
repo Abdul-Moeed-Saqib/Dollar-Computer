@@ -14,10 +14,11 @@ namespace COMP123_S2019_Assignment5B_301004138
         public static Product product;
 
         /// <summary>
+        /// Application: Dollar Computers
         /// Name: Abdul Moeed Saqib
         /// Student ID: 301004138
-        /// Date last Modified: August 2nd, 2019
-        /// Program description: Dollar Computers allows you to order different kinds of Computer like laptops or desktops.
+        /// Date last Modified: August 13th, 2019
+        /// Program description: Dollar Computers allows user to order different kinds of Computer like laptops or desktops.
         /// 
         /// RevisionHistory:
         /// 1: created splash screen and created forms like StartForm, SelectForm, ProductInfoForm, OrderForm and AboutForm
@@ -25,6 +26,11 @@ namespace COMP123_S2019_Assignment5B_301004138
         /// 3: created DataGridView and Use the Entity Framework to connect to the Database named DollarComputers
         /// 4: created Entity data model
         /// 5: added SaveFileDialog to save file and OpenFileDialog to the ProductInfoForm to save the data that customer choosed. Also added OpenFileDialog to the StartForm
+        /// 6: fixed SelectedTextBox that shows manufacturer, model and the cost
+        /// 7: fixed SelectAnotherProduct for using OrderForm Activiated event that it can show any product that user select and bring the data to SelectForm
+        /// 8: added new information to the AboutBox
+        /// 9: computer component fields can move to OrderForm whatever the user choosed from SelectForm or a previously saved file 
+        /// 10: In OrderForm, user can see the sales tax and the total cost of the product
         /// </summary>
         [STAThread]
         static void Main()

@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("COMP123-S2019-Assignment5B-301004138")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This is online computer shop that you can order any type of PC you want. If it's for your school, busniess or gaming, then you are in the right place!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("COMP123-S2019-Assignment5B-301004138")]
+[assembly: AssemblyCompany("Saqib Industries")]
+[assembly: AssemblyProduct("Dollar Computers")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

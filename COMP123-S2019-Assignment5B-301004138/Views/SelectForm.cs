@@ -68,12 +68,10 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         {
             var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
             var rows = ProductDataGridView.Rows;
-            var columnCount = ProductDataGridView.ColumnCount;
             var cells = rows[rowIndex].Cells;
 
-            //rows[rowIndex].Selected = false;
-
-            SelectedData(columnCount, cells);
+            
+            SelectedData(cells);
 
             Program.product.productID = short.Parse(cells[0].Value.ToString());
             Program.product.cost = decimal.Parse(cells[1].Value.ToString());
@@ -92,15 +90,16 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             Program.product.CPU_speed = cells[12].Value.ToString();
             Program.product.webcam = cells[30].Value.ToString();
         }
+        
 
-        private void SelectedData(int columnCount, DataGridViewCellCollection cells)
+        private void SelectedData(DataGridViewCellCollection cells)
         {
             string outputString = string.Empty;
+            string manufacturer = cells[2].Value.ToString();
+            string model = cells[3].Value.ToString();
+            decimal cost = (decimal)cells[1].Value;
             
-            for (int i = 0; i < columnCount; i++)
-            {
-                outputString += cells[i].Value.ToString()+ ", ";
-            }
+            outputString = string.Format($"{manufacturer} {model} Priced at: {cost:C}");
 
             SelectionTextBox.Text = outputString;
         }
