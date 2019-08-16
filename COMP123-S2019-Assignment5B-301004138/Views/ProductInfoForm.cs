@@ -44,7 +44,7 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         }
 
         /// <summary>
-        /// This is event handler for CancelButton Click event
+        /// This is event handler for ProductInfoForm Load event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -76,6 +76,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Configure the file dialog
+
             ProductSaveFileDialog.FileName = "Hardware.txt";
             ProductSaveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
             ProductSaveFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
@@ -120,6 +122,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Configure the file dialog
+
             ProductOpenFileDialog.FileName = "Harware.txt";
             ProductOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
             ProductOpenFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
@@ -129,6 +133,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             {
                 try
                 {
+                    // this will opening file stream to read
+
                     using (StreamReader input = new StreamReader(File.Open(ProductOpenFileDialog.FileName, FileMode.Open)))
                     {
                         Program.product.productID = short.Parse(input.ReadLine());
@@ -148,20 +154,27 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
                         Program.product.CPU_speed = input.ReadLine();
                         Program.product.webcam = input.ReadLine();
 
+                        // cleaning up!
+
                         input.Close();
                         input.Dispose();
                     }
                 }
                 catch (IOException error)
                 {
+                    // error when user select the wrong file
 
                     MessageBox.Show($"ERROR: {error.Message}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (FormatException errorFormat)
                 {
+                    // this happens when the format of the file is wrong
+
                     MessageBox.Show($"ERROR: {errorFormat.Message} \n\nPlease select the correct file type", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            // loads the new selection
 
             ProductInfoForm_Load(sender,e);
         }
@@ -175,11 +188,14 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         {
             Program.Forms[FormName.SELECT_FORM].Show();
             this.Hide();
+
+            // its going to load when user is select the new product
+
             ProductInfoForm_Activated(sender,e);
         }
 
         /// <summary>
-        /// This is event handler for ProductInfoForm Activate event
+        /// This is event handler for ProductInfoForm Activated event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

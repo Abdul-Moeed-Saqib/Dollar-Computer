@@ -31,6 +31,7 @@ namespace COMP123_S2019_Assignment5B_301004138
         /// 8: added new information to the AboutBox
         /// 9: computer component fields can move to OrderForm whatever the user choosed from SelectForm or a previously saved file 
         /// 10: In OrderForm, user can see the sales tax and the total cost of the product
+        /// 11: added images if user chose Destop PC or Laptop
         /// </summary>
         [STAThread]
         static void Main()

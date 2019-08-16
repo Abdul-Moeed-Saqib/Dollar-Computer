@@ -39,6 +39,11 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             this.Hide();
         }
 
+        /// <summary>
+        /// This is event handler for LoadSavedButton Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoadSavedButton_Click(object sender, EventArgs e)
         {
             OpenFile();
@@ -52,15 +57,21 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// </summary>
         private void OpenFile()
         {
-            ProductOpenFileDialog.FileName = "Harware.txt";
+            // Configure the file dialog
+
+            ProductOpenFileDialog.FileName = "Hardware.txt";
             ProductOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
             ProductOpenFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+
+            // Open the file dialog
 
             var resultFile = ProductOpenFileDialog.ShowDialog();
             if (resultFile != DialogResult.Cancel)
             {
                 try
                 {
+                    // Open file stream to read
+
                     using (StreamReader input = new StreamReader(File.Open(ProductOpenFileDialog.FileName, FileMode.Open)))
                     {
                         Program.product.productID = short.Parse(input.ReadLine());
@@ -79,6 +90,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
                         Program.product.CPU_type = input.ReadLine();
                         Program.product.CPU_speed = input.ReadLine();
                         Program.product.webcam = input.ReadLine();
+
+                        // cleaning it up
 
                         input.Close();
                         input.Dispose();

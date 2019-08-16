@@ -26,6 +26,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void SelectForm_Load(object sender, EventArgs e)
         {
+            // loading up the database
+
             using (var db = new ProductModel())
             {
                 db.products.Load();
@@ -74,6 +76,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             var rows = ProductDataGridView.Rows;
             var cells = rows[rowIndex].Cells;
             
+            // Checking to see if the is not selected then the NextButton will be disable
+
             if (rows[rowIndex].Selected == false)
             {
                 EmptySelectionTextBox.Visible = true;

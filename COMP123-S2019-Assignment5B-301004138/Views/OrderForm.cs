@@ -25,6 +25,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            // This will cancel the application if the user click Yes button
+
             var confirmResult = MessageBox.Show("Are you sure you want to cancel? \n\nYour order will be lost.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (confirmResult == DialogResult.Yes)
             {
@@ -52,6 +54,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void FinishButton_Click(object sender, EventArgs e)
         {
+            // This will termanite the program once the user clicks ok button
+
             var result = MessageBox.Show("Thank you for your busniess.\nThe order will be processed in 7-10 business days.", "Thank you", MessageBoxButtons.OK,MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
@@ -59,6 +63,11 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             }
         }
 
+        /// <summary>
+        /// This is event handler for aboutToolStripMenuItem Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.ABOUT_FORM].ShowDialog();
@@ -92,7 +101,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             CPUSpeedDataLabel.Text = Program.product.CPU_speed;
             WebCamDataLabel.Text = Program.product.webcam;
 
-            
+            // checking if user choose laptop or desktop PC
+
             if (Program.product.platform.Equals("Laptop")) 
             {
                 PlatformPictureBox.Image = new Bitmap("laptop.jpg");
@@ -161,6 +171,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             CPUSpeedDataLabel.Text = Program.product.CPU_speed;
             WebCamDataLabel.Text = Program.product.webcam;
 
+            // checking if user choose laptop or desktop PC
+
             if (Program.product.platform.Equals("Laptop"))
             {
                 PlatformPictureBox.Image = new Bitmap("laptop.jpg");
@@ -180,6 +192,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // This will give you a message that it will be printing and once the user click ok, it will take you to the Print Preview and you can actually print the product's details
+
             MessageBox.Show("Your Order will be Printing Now!", "Printing...", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
             ProductPrintForm.Print();
