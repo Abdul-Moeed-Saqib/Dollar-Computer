@@ -91,6 +91,19 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             CPUTypeDataLabel.Text = Program.product.CPU_type;
             CPUSpeedDataLabel.Text = Program.product.CPU_speed;
             WebCamDataLabel.Text = Program.product.webcam;
+
+            
+            if (Program.product.platform.Equals("Laptop")) 
+            {
+                PlatformPictureBox.Image = new Bitmap("laptop.jpg");
+                PlatformPictureBox.SizeMode = PictureBoxSizeMode.StretchImage; 
+            }
+            else
+            {
+                PlatformPictureBox.Image = new Bitmap("desktopPC.jpg");
+                PlatformPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            
         }
 
         /// <summary>
@@ -147,6 +160,17 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             CPUTypeDataLabel.Text = Program.product.CPU_type;
             CPUSpeedDataLabel.Text = Program.product.CPU_speed;
             WebCamDataLabel.Text = Program.product.webcam;
+
+            if (Program.product.platform.Equals("Laptop"))
+            {
+                PlatformPictureBox.Image = new Bitmap("laptop.jpg");
+                PlatformPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                PlatformPictureBox.Image = new Bitmap("desktopPC.jpg");
+                PlatformPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
 
         /// <summary>

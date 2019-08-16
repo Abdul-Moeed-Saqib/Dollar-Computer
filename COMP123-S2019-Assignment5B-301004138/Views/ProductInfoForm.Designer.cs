@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductInfoForm));
             this.ProductFormMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,8 +80,6 @@
             this.ProductSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.SelectAnotherProductButton = new System.Windows.Forms.Button();
             this.SelectConfirmLabel = new System.Windows.Forms.Label();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductFormMenuStrip.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.TechSpecsGroupBox.SuspendLayout();
@@ -109,20 +109,40 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
+            this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
+            this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -170,6 +190,7 @@
             this.ProductIDDataLabel.BackColor = System.Drawing.Color.White;
             this.ProductIDDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ProductIDDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductIDDataLabel.ForeColor = System.Drawing.Color.Black;
             this.ProductIDDataLabel.Location = new System.Drawing.Point(135, 45);
             this.ProductIDDataLabel.Name = "ProductIDDataLabel";
             this.ProductIDDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -192,6 +213,7 @@
             this.ConditionDataLabel.BackColor = System.Drawing.Color.White;
             this.ConditionDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ConditionDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConditionDataLabel.ForeColor = System.Drawing.Color.Black;
             this.ConditionDataLabel.Location = new System.Drawing.Point(481, 45);
             this.ConditionDataLabel.Name = "ConditionDataLabel";
             this.ConditionDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -214,6 +236,7 @@
             this.CostDataLabel.BackColor = System.Drawing.Color.White;
             this.CostDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CostDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostDataLabel.ForeColor = System.Drawing.Color.Black;
             this.CostDataLabel.Location = new System.Drawing.Point(803, 45);
             this.CostDataLabel.Name = "CostDataLabel";
             this.CostDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -222,6 +245,7 @@
             // 
             // ProductInfoGroupBox
             // 
+            this.ProductInfoGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.ProductInfoGroupBox.Controls.Add(this.OSLabel);
             this.ProductInfoGroupBox.Controls.Add(this.ModelLabel);
             this.ProductInfoGroupBox.Controls.Add(this.OSDataLabel);
@@ -263,7 +287,7 @@
             this.OSDataLabel.BackColor = System.Drawing.Color.White;
             this.OSDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.OSDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OSDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OSDataLabel.ForeColor = System.Drawing.Color.Black;
             this.OSDataLabel.Location = new System.Drawing.Point(532, 39);
             this.OSDataLabel.Name = "OSDataLabel";
             this.OSDataLabel.Size = new System.Drawing.Size(433, 30);
@@ -275,7 +299,7 @@
             this.ModelDataLabel.BackColor = System.Drawing.Color.White;
             this.ModelDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ModelDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ModelDataLabel.ForeColor = System.Drawing.Color.Black;
             this.ModelDataLabel.Location = new System.Drawing.Point(532, 91);
             this.ModelDataLabel.Name = "ModelDataLabel";
             this.ModelDataLabel.Size = new System.Drawing.Size(433, 30);
@@ -297,7 +321,7 @@
             this.ManufacturerDataLabel.BackColor = System.Drawing.Color.White;
             this.ManufacturerDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ManufacturerDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManufacturerDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ManufacturerDataLabel.ForeColor = System.Drawing.Color.Black;
             this.ManufacturerDataLabel.Location = new System.Drawing.Point(135, 87);
             this.ManufacturerDataLabel.Name = "ManufacturerDataLabel";
             this.ManufacturerDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -319,7 +343,7 @@
             this.PlatformDataLabel.BackColor = System.Drawing.Color.White;
             this.PlatformDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PlatformDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlatformDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.PlatformDataLabel.ForeColor = System.Drawing.Color.Black;
             this.PlatformDataLabel.Location = new System.Drawing.Point(135, 34);
             this.PlatformDataLabel.Name = "PlatformDataLabel";
             this.PlatformDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -328,6 +352,7 @@
             // 
             // TechSpecsGroupBox
             // 
+            this.TechSpecsGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.TechSpecsGroupBox.Controls.Add(this.LCDSizeLabel);
             this.TechSpecsGroupBox.Controls.Add(this.CPUNumberLabel);
             this.TechSpecsGroupBox.Controls.Add(this.CPUSpeedLabel);
@@ -389,7 +414,7 @@
             this.CPUSpeedDataLabel.BackColor = System.Drawing.Color.White;
             this.CPUSpeedDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CPUSpeedDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUSpeedDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.CPUSpeedDataLabel.ForeColor = System.Drawing.Color.Black;
             this.CPUSpeedDataLabel.Location = new System.Drawing.Point(418, 140);
             this.CPUSpeedDataLabel.Name = "CPUSpeedDataLabel";
             this.CPUSpeedDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -421,7 +446,7 @@
             this.WebCamDataLabel.BackColor = System.Drawing.Color.White;
             this.WebCamDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.WebCamDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WebCamDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.WebCamDataLabel.ForeColor = System.Drawing.Color.Black;
             this.WebCamDataLabel.Location = new System.Drawing.Point(703, 140);
             this.WebCamDataLabel.Name = "WebCamDataLabel";
             this.WebCamDataLabel.Size = new System.Drawing.Size(262, 30);
@@ -433,7 +458,7 @@
             this.CPUTypeDataLabel.BackColor = System.Drawing.Color.White;
             this.CPUTypeDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CPUTypeDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUTypeDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.CPUTypeDataLabel.ForeColor = System.Drawing.Color.Black;
             this.CPUTypeDataLabel.Location = new System.Drawing.Point(135, 136);
             this.CPUTypeDataLabel.Name = "CPUTypeDataLabel";
             this.CPUTypeDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -465,7 +490,7 @@
             this.GPUTypeDataLabel.BackColor = System.Drawing.Color.White;
             this.GPUTypeDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GPUTypeDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GPUTypeDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.GPUTypeDataLabel.ForeColor = System.Drawing.Color.Black;
             this.GPUTypeDataLabel.Location = new System.Drawing.Point(703, 91);
             this.GPUTypeDataLabel.Name = "GPUTypeDataLabel";
             this.GPUTypeDataLabel.Size = new System.Drawing.Size(262, 30);
@@ -487,7 +512,7 @@
             this.CPUBrandDataLabel.BackColor = System.Drawing.Color.White;
             this.CPUBrandDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CPUBrandDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUBrandDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.CPUBrandDataLabel.ForeColor = System.Drawing.Color.Black;
             this.CPUBrandDataLabel.Location = new System.Drawing.Point(135, 87);
             this.CPUBrandDataLabel.Name = "CPUBrandDataLabel";
             this.CPUBrandDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -509,7 +534,7 @@
             this.CPUNumberDataLabel.BackColor = System.Drawing.Color.White;
             this.CPUNumberDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CPUNumberDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUNumberDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.CPUNumberDataLabel.ForeColor = System.Drawing.Color.Black;
             this.CPUNumberDataLabel.Location = new System.Drawing.Point(416, 91);
             this.CPUNumberDataLabel.Name = "CPUNumberDataLabel";
             this.CPUNumberDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -521,7 +546,7 @@
             this.HDDDataLabel.BackColor = System.Drawing.Color.White;
             this.HDDDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.HDDDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HDDDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.HDDDataLabel.ForeColor = System.Drawing.Color.Black;
             this.HDDDataLabel.Location = new System.Drawing.Point(703, 38);
             this.HDDDataLabel.Name = "HDDDataLabel";
             this.HDDDataLabel.Size = new System.Drawing.Size(262, 30);
@@ -533,7 +558,7 @@
             this.LCDSizeDataLabel.BackColor = System.Drawing.Color.White;
             this.LCDSizeDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LCDSizeDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LCDSizeDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LCDSizeDataLabel.ForeColor = System.Drawing.Color.Black;
             this.LCDSizeDataLabel.Location = new System.Drawing.Point(418, 34);
             this.LCDSizeDataLabel.Name = "LCDSizeDataLabel";
             this.LCDSizeDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -545,7 +570,7 @@
             this.MemoryDataLabel.BackColor = System.Drawing.Color.White;
             this.MemoryDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MemoryDataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemoryDataLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MemoryDataLabel.ForeColor = System.Drawing.Color.Black;
             this.MemoryDataLabel.Location = new System.Drawing.Point(135, 34);
             this.MemoryDataLabel.Name = "MemoryDataLabel";
             this.MemoryDataLabel.Size = new System.Drawing.Size(141, 30);
@@ -612,31 +637,12 @@
             this.SelectConfirmLabel.Text = "Click Next To Confirm Your Selection";
             this.SelectConfirmLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
-            this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openToolStripMenuItem.Text = "&Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
-            this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saveToolStripMenuItem.Text = "&Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.ControlBox = false;
             this.Controls.Add(this.SelectAnotherProductButton);
@@ -652,6 +658,7 @@
             this.Controls.Add(this.SelectConfirmLabel);
             this.Controls.Add(this.ProductIDLabel);
             this.Controls.Add(this.ProductFormMenuStrip);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

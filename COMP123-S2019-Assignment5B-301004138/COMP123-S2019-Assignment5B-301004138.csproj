@@ -69,6 +69,11 @@
       <DependentUpon>DollarComputersDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FormName.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,14 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Views\SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +169,7 @@
   <ItemGroup>
     <Content Include="logo.ico" />
     <Content Include="logoC.ico" />
+    <None Include="Resources\6795796-gif.jpg" />
     <None Include="Resources\DollarComputerLogoReal.png" />
     <None Include="Resources\splashImage1.png" />
     <None Include="Resources\splashImage.png" />
