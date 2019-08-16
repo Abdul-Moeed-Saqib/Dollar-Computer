@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,7 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         {
             Program.Forms[FormName.PRODUCT_INFO_FORM].Show();
             this.Hide();
+
             OrderForm_Activated(sender, e);
         }
 
@@ -145,6 +147,18 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             CPUTypeDataLabel.Text = Program.product.CPU_type;
             CPUSpeedDataLabel.Text = Program.product.CPU_speed;
             WebCamDataLabel.Text = Program.product.webcam;
+        }
+
+        /// <summary>
+        /// This is event handler for printToolStripMenuItem Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your Order will be Printing Now!", "Printing...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
+            ProductPrintForm.Print();
         }
     }
 }

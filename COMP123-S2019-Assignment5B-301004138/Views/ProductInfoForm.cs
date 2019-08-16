@@ -187,7 +187,9 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         {
             ProductIDDataLabel.Text = Program.product.productID.ToString();
             CostDataLabel.Text = Program.product.cost.ToString();
+
             CostDataLabel.Text = string.Format("{0:C2}", decimal.Parse(CostDataLabel.Text));
+
             ManufacturerDataLabel.Text = Program.product.manufacturer.ToString();
             ModelDataLabel.Text = Program.product.model.ToString();
             ConditionDataLabel.Text = Program.product.condition.ToString();
@@ -202,6 +204,66 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
             CPUTypeDataLabel.Text = Program.product.CPU_type;
             CPUSpeedDataLabel.Text = Program.product.CPU_speed;
             WebCamDataLabel.Text = Program.product.webcam;
+        }
+
+        /// <summary>
+        /// This is event handler for NextButton MouseHover event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NextButton_MouseHover(object sender, EventArgs e)
+        {
+            NextButton.ForeColor = Color.Purple;
+        }
+
+        /// <summary>
+        /// This is event handler for NextButton MouseLeave event 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NextButton_MouseLeave(object sender, EventArgs e)
+        {
+            NextButton.ForeColor = Color.Transparent;
+        }
+
+        /// <summary>
+        /// This is event handler for CancelButton MouseHover
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CancelButton_MouseHover(object sender, EventArgs e)
+        {
+            CancelButton.ForeColor = Color.Red;
+        }
+
+        /// <summary>
+        /// This is event handler for CancelButton MouseLeave event 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CancelButton_MouseLeave(object sender, EventArgs e)
+        {
+            CancelButton.ForeColor = Color.Transparent;
+        }
+
+        /// <summary>
+        /// This is event handler for SelectAnotherProductButton MouseHover event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SelectAnotherProductButton_MouseHover(object sender, EventArgs e)
+        {
+            SelectAnotherProductButton.ForeColor = Color.Violet;
+        }
+
+        /// <summary>
+        /// This is event handler for SelectAnotherProductButton MouseLeave event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SelectAnotherProductButton_MouseLeave(object sender, EventArgs e)
+        {
+            SelectAnotherProductButton.ForeColor = Color.Transparent;
         }
     }
 }

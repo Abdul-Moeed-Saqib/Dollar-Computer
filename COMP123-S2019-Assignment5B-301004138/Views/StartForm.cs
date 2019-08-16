@@ -95,5 +95,65 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
                 }
             }
         }
+
+        /// <summary>
+        /// This is event handler for StartOrderButton MouseHover event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StartOrderButton_MouseHover(object sender, EventArgs e)
+        {
+            StartOrderButton.ForeColor = Color.Purple;
+        }
+
+        /// <summary>
+        /// This is event handler for StartOrderButton MouseLeave
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StartOrderButton_MouseLeave(object sender, EventArgs e)
+        {
+            StartOrderButton.ForeColor = Color.Transparent;
+        }
+
+        /// <summary>
+        /// This is event handler for LoadSavedButton MouseHover event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoadSavedButton_MouseHover(object sender, EventArgs e)
+        {
+            LoadSavedButton.ForeColor = Color.Green;
+        }
+
+        /// <summary>
+        /// This is event handler for LoadSavedButton MouseLeave event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoadSavedButton_MouseLeave(object sender, EventArgs e)
+        {
+            LoadSavedButton.ForeColor = Color.Transparent;
+        }
+
+        /// <summary>
+        /// This is event handler for ExitOrderButton MouseHover event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ExitOrderButton_MouseHover(object sender, EventArgs e)
+        {
+            ExitOrderButton.ForeColor = Color.Red;
+        }
+
+        /// <summary>
+        /// This is event handler for ExitOrderButton MouseLeave event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ExitOrderButton_MouseLeave(object sender, EventArgs e)
+        {
+            ExitOrderButton.ForeColor = Color.Transparent;
+        }
     }
 }

@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Product.cs" />
+    <Compile Include="Data\ProductField.cs" />
     <Compile Include="Data\ProductModel.cs" />
     <Compile Include="DollarComputersDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -168,6 +169,9 @@
   <ItemGroup>
     <Content Include="logo.ico" />
     <Content Include="logoC.ico" />
+    <None Include="Resources\DollarComputerLogoReal.png" />
+    <None Include="Resources\splashImage1.png" />
+    <None Include="Resources\splashImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

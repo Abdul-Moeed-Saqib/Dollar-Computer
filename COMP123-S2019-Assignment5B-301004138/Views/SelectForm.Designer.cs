@@ -31,6 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectForm));
             this.ProductDataGridView = new System.Windows.Forms.DataGridView();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.SelectFormLineShape = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.ComputerHardwareListLabel = new System.Windows.Forms.Label();
+            this.SelectionLabel = new System.Windows.Forms.Label();
+            this.SelectionTextBox = new System.Windows.Forms.TextBox();
+            this.DollarComputerLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,14 +71,9 @@
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CancelButton = new System.Windows.Forms.Button();
-            this.NextButton = new System.Windows.Forms.Button();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.SelectFormLineShape = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.ComputerHardwareListLabel = new System.Windows.Forms.Label();
-            this.SelectionLabel = new System.Windows.Forms.Label();
-            this.SelectionTextBox = new System.Windows.Forms.TextBox();
+            this.EmptySelectionTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DollarComputerLogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +129,103 @@
             this.ProductDataGridView.Size = new System.Drawing.Size(982, 494);
             this.ProductDataGridView.TabIndex = 0;
             this.ProductDataGridView.SelectionChanged += new System.EventHandler(this.ProductDataGridView_SelectionChanged);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.CancelButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButton.ForeColor = System.Drawing.Color.White;
+            this.CancelButton.Location = new System.Drawing.Point(746, 663);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(112, 54);
+            this.CancelButton.TabIndex = 1;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.MouseLeave += new System.EventHandler(this.CancelButton_MouseLeave);
+            this.CancelButton.MouseHover += new System.EventHandler(this.CancelButton_MouseHover);
+            // 
+            // NextButton
+            // 
+            this.NextButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.NextButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.ForeColor = System.Drawing.Color.White;
+            this.NextButton.Location = new System.Drawing.Point(884, 663);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(112, 54);
+            this.NextButton.TabIndex = 1;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = false;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            this.NextButton.MouseLeave += new System.EventHandler(this.NextButton_MouseLeave);
+            this.NextButton.MouseHover += new System.EventHandler(this.NextButton_MouseHover);
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.SelectFormLineShape});
+            this.shapeContainer1.Size = new System.Drawing.Size(1008, 729);
+            this.shapeContainer1.TabIndex = 2;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // SelectFormLineShape
+            // 
+            this.SelectFormLineShape.Name = "SelectFormLineShape";
+            this.SelectFormLineShape.X1 = 2;
+            this.SelectFormLineShape.X2 = 1007;
+            this.SelectFormLineShape.Y1 = 79;
+            this.SelectFormLineShape.Y2 = 80;
+            // 
+            // ComputerHardwareListLabel
+            // 
+            this.ComputerHardwareListLabel.BackColor = System.Drawing.Color.White;
+            this.ComputerHardwareListLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ComputerHardwareListLabel.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComputerHardwareListLabel.ForeColor = System.Drawing.Color.Purple;
+            this.ComputerHardwareListLabel.Location = new System.Drawing.Point(12, 23);
+            this.ComputerHardwareListLabel.Name = "ComputerHardwareListLabel";
+            this.ComputerHardwareListLabel.Size = new System.Drawing.Size(306, 34);
+            this.ComputerHardwareListLabel.TabIndex = 3;
+            this.ComputerHardwareListLabel.Text = "Dollar Computer Hardware List";
+            this.ComputerHardwareListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SelectionLabel
+            // 
+            this.SelectionLabel.Font = new System.Drawing.Font("Arial Black", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectionLabel.ForeColor = System.Drawing.Color.White;
+            this.SelectionLabel.Location = new System.Drawing.Point(7, 671);
+            this.SelectionLabel.Name = "SelectionLabel";
+            this.SelectionLabel.Size = new System.Drawing.Size(179, 37);
+            this.SelectionLabel.TabIndex = 4;
+            this.SelectionLabel.Text = "Your Selection";
+            this.SelectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SelectionTextBox
+            // 
+            this.SelectionTextBox.BackColor = System.Drawing.Color.White;
+            this.SelectionTextBox.Enabled = false;
+            this.SelectionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.SelectionTextBox.ForeColor = System.Drawing.Color.Black;
+            this.SelectionTextBox.Location = new System.Drawing.Point(183, 671);
+            this.SelectionTextBox.Multiline = true;
+            this.SelectionTextBox.Name = "SelectionTextBox";
+            this.SelectionTextBox.ReadOnly = true;
+            this.SelectionTextBox.Size = new System.Drawing.Size(526, 42);
+            this.SelectionTextBox.TabIndex = 5;
+            this.SelectionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // DollarComputerLogoPictureBox
+            // 
+            this.DollarComputerLogoPictureBox.Image = global::COMP123_S2019_Assignment5B_301004138.Properties.Resources.DollarComputerLogoReal;
+            this.DollarComputerLogoPictureBox.Location = new System.Drawing.Point(885, 7);
+            this.DollarComputerLogoPictureBox.Name = "DollarComputerLogoPictureBox";
+            this.DollarComputerLogoPictureBox.Size = new System.Drawing.Size(114, 69);
+            this.DollarComputerLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.DollarComputerLogoPictureBox.TabIndex = 6;
+            this.DollarComputerLogoPictureBox.TabStop = false;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -379,89 +479,29 @@
             // 
             this.productBindingSource.DataSource = typeof(COMP123_S2019_Assignment5B_301004138.Data.Product);
             // 
-            // CancelButton
+            // EmptySelectionTextBox
             // 
-            this.CancelButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButton.Location = new System.Drawing.Point(746, 663);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(112, 54);
-            this.CancelButton.TabIndex = 1;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // NextButton
-            // 
-            this.NextButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextButton.Location = new System.Drawing.Point(884, 663);
-            this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(112, 54);
-            this.NextButton.TabIndex = 1;
-            this.NextButton.Text = "Next";
-            this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.SelectFormLineShape});
-            this.shapeContainer1.Size = new System.Drawing.Size(1008, 729);
-            this.shapeContainer1.TabIndex = 2;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // SelectFormLineShape
-            // 
-            this.SelectFormLineShape.Name = "SelectFormLineShape";
-            this.SelectFormLineShape.X1 = 2;
-            this.SelectFormLineShape.X2 = 1007;
-            this.SelectFormLineShape.Y1 = 79;
-            this.SelectFormLineShape.Y2 = 80;
-            // 
-            // ComputerHardwareListLabel
-            // 
-            this.ComputerHardwareListLabel.BackColor = System.Drawing.Color.White;
-            this.ComputerHardwareListLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ComputerHardwareListLabel.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComputerHardwareListLabel.Location = new System.Drawing.Point(12, 23);
-            this.ComputerHardwareListLabel.Name = "ComputerHardwareListLabel";
-            this.ComputerHardwareListLabel.Size = new System.Drawing.Size(306, 34);
-            this.ComputerHardwareListLabel.TabIndex = 3;
-            this.ComputerHardwareListLabel.Text = "Dollar Computer Hardware List";
-            this.ComputerHardwareListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SelectionLabel
-            // 
-            this.SelectionLabel.Font = new System.Drawing.Font("Arial Black", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectionLabel.Location = new System.Drawing.Point(7, 671);
-            this.SelectionLabel.Name = "SelectionLabel";
-            this.SelectionLabel.Size = new System.Drawing.Size(179, 37);
-            this.SelectionLabel.TabIndex = 4;
-            this.SelectionLabel.Text = "Your Selection";
-            this.SelectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SelectionTextBox
-            // 
-            this.SelectionTextBox.BackColor = System.Drawing.Color.White;
-            this.SelectionTextBox.Enabled = false;
-            this.SelectionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.SelectionTextBox.ForeColor = System.Drawing.Color.Black;
-            this.SelectionTextBox.Location = new System.Drawing.Point(183, 671);
-            this.SelectionTextBox.Multiline = true;
-            this.SelectionTextBox.Name = "SelectionTextBox";
-            this.SelectionTextBox.ReadOnly = true;
-            this.SelectionTextBox.Size = new System.Drawing.Size(526, 42);
-            this.SelectionTextBox.TabIndex = 5;
-            this.SelectionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.EmptySelectionTextBox.BackColor = System.Drawing.Color.White;
+            this.EmptySelectionTextBox.Enabled = false;
+            this.EmptySelectionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.EmptySelectionTextBox.ForeColor = System.Drawing.Color.Black;
+            this.EmptySelectionTextBox.Location = new System.Drawing.Point(183, 671);
+            this.EmptySelectionTextBox.Multiline = true;
+            this.EmptySelectionTextBox.Name = "EmptySelectionTextBox";
+            this.EmptySelectionTextBox.ReadOnly = true;
+            this.EmptySelectionTextBox.Size = new System.Drawing.Size(526, 42);
+            this.EmptySelectionTextBox.TabIndex = 7;
+            this.EmptySelectionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Purple;
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.ControlBox = false;
+            this.Controls.Add(this.EmptySelectionTextBox);
+            this.Controls.Add(this.DollarComputerLogoPictureBox);
             this.Controls.Add(this.SelectionTextBox);
             this.Controls.Add(this.SelectionLabel);
             this.Controls.Add(this.ComputerHardwareListLabel);
@@ -478,6 +518,7 @@
             this.Text = "Select Your Computer";
             this.Load += new System.EventHandler(this.SelectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DollarComputerLogoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -526,6 +567,8 @@
         private System.Windows.Forms.Label ComputerHardwareListLabel;
         private System.Windows.Forms.Label SelectionLabel;
         private System.Windows.Forms.TextBox SelectionTextBox;
+        private System.Windows.Forms.PictureBox DollarComputerLogoPictureBox;
+        private System.Windows.Forms.TextBox EmptySelectionTextBox;
     }
 }
 

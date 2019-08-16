@@ -41,6 +41,8 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            // gives a warning if the user wants to cancel the application
+
             var confirmResult = MessageBox.Show("Are you sure you want to cancel?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (confirmResult == DialogResult.Yes)
             {
@@ -66,42 +68,101 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
+            // local scope aliases
+
             var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
             var rows = ProductDataGridView.Rows;
             var cells = rows[rowIndex].Cells;
-
+            
+            if (rows[rowIndex].Selected == false)
+            {
+                EmptySelectionTextBox.Visible = true;
+                SelectionTextBox.Visible = false;
+                NextButton.Enabled = false;
+            }
+            else
+            {
+                SelectionTextBox.Visible = true;
+                EmptySelectionTextBox.Visible = false;
+                NextButton.Enabled = true;
+            }
             
             SelectedData(cells);
 
-            Program.product.productID = short.Parse(cells[0].Value.ToString());
-            Program.product.cost = decimal.Parse(cells[1].Value.ToString());
-            Program.product.manufacturer = cells[2].Value.ToString();
-            Program.product.model = cells[3].Value.ToString();
-            Program.product.condition = cells[14].Value.ToString();
-            Program.product.platform = cells[16].Value.ToString();
-            Program.product.OS = cells[15].Value.ToString();
-            Program.product.RAM_size = cells[5].Value.ToString();
-            Program.product.screensize = cells[7].Value.ToString();
-            Program.product.HDD_size = cells[17].Value.ToString();
-            Program.product.CPU_brand = cells[10].Value.ToString();
-            Program.product.CPU_number = cells[13].Value.ToString();
-            Program.product.GPU_Type = cells[19].Value.ToString();
-            Program.product.CPU_type = cells[11].Value.ToString();
-            Program.product.CPU_speed = cells[12].Value.ToString();
-            Program.product.webcam = cells[30].Value.ToString();
-        }
-        
+            // Assigning the data into the Program.product
 
+            Program.product.productID = short.Parse(cells[(int)ProductField.PRODUCT_ID].Value.ToString());
+            Program.product.cost = decimal.Parse(cells[(int)ProductField.COST].Value.ToString());
+            Program.product.manufacturer = cells[(int)ProductField.MANUFACTURER].Value.ToString();
+            Program.product.model = cells[(int)ProductField.MODEL].Value.ToString();
+            Program.product.condition = cells[(int)ProductField.CONDITION].Value.ToString();
+            Program.product.platform = cells[(int)ProductField.PLATFORM].Value.ToString();
+            Program.product.OS = cells[(int)ProductField.OPEARTING_SYSTEM].Value.ToString();
+            Program.product.RAM_size = cells[(int)ProductField.RAM_SIZE].Value.ToString();
+            Program.product.screensize = cells[(int)ProductField.SCREENSIZE].Value.ToString();
+            Program.product.HDD_size = cells[(int)ProductField.HDD_SIZE].Value.ToString();
+            Program.product.CPU_brand = cells[(int)ProductField.CPU_BRAND].Value.ToString();
+            Program.product.CPU_number = cells[(int)ProductField.CPU_NUMBER].Value.ToString();
+            Program.product.GPU_Type = cells[(int)ProductField.GPU_TYPE].Value.ToString();
+            Program.product.CPU_type = cells[(int)ProductField.CPU_TYPE].Value.ToString();
+            Program.product.CPU_speed = cells[(int)ProductField.CPU_SPEED].Value.ToString();
+            Program.product.webcam = cells[(int)ProductField.WEBCAM].Value.ToString();
+        }
+
+        /// <summary>
+        /// This method shows the selected data like manufacturer, model and the cost from ProductDataGridView
+        /// </summary>
+        /// <param name="cells"></param>
         private void SelectedData(DataGridViewCellCollection cells)
         {
             string outputString = string.Empty;
-            string manufacturer = cells[2].Value.ToString();
-            string model = cells[3].Value.ToString();
-            decimal cost = (decimal)cells[1].Value;
+            string manufacturer = cells[(int)ProductField.MANUFACTURER].Value.ToString();
+            string model = cells[(int)ProductField.MODEL].Value.ToString();
+            decimal cost = (decimal)cells[(int)ProductField.COST].Value;
             
             outputString = string.Format($"{manufacturer} {model} Priced at: {cost:C}");
-
+            
             SelectionTextBox.Text = outputString;
+        }
+
+        /// <summary>
+        /// This is event handler for NextButton MouseHover event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NextButton_MouseHover(object sender, EventArgs e)
+        {
+            NextButton.ForeColor = Color.Purple;
+        }
+
+        /// <summary>
+        /// This is event handler for CancelButton MouseHover event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CancelButton_MouseHover(object sender, EventArgs e)
+        {
+            CancelButton.ForeColor = Color.Red;
+        }
+
+        /// <summary>
+        /// This is event handler for NextButton MouseLeave event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NextButton_MouseLeave(object sender, EventArgs e)
+        {
+            NextButton.ForeColor = Color.Transparent;
+        }
+
+        /// <summary>
+        /// This is event handler for CancelButton MouseLeave event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CancelButton_MouseLeave(object sender, EventArgs e)
+        {
+            CancelButton.ForeColor = Color.Transparent;
         }
     }
 }
