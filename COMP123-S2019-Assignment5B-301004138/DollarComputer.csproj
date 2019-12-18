@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7220FC60-5607-4EB1-A815-040B27F2DA68}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>COMP123_S2019_Assignment5B_301004138</RootNamespace>
-    <AssemblyName>COMP123-S2019-Assignment5B-301004138</AssemblyName>
+    <RootNamespace>DollarComputer</RootNamespace>
+    <AssemblyName>DollarComputer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

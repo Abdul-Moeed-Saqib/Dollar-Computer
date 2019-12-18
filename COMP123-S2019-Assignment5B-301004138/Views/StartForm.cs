@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace COMP123_S2019_Assignment5B_301004138.Views
+namespace DollarComputer.Views
 {
     public partial class StartForm : Form
     {
@@ -126,7 +126,7 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void StartOrderButton_MouseLeave(object sender, EventArgs e)
         {
-            StartOrderButton.ForeColor = Color.Transparent;
+            StartOrderButton.ForeColor = Color.FromArgb(34, 36, 49);
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void LoadSavedButton_MouseLeave(object sender, EventArgs e)
         {
-            LoadSavedButton.ForeColor = Color.Transparent;
+            LoadSavedButton.ForeColor = Color.FromArgb(34, 36, 49);
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace COMP123_S2019_Assignment5B_301004138.Views
         /// <param name="e"></param>
         private void ExitOrderButton_MouseLeave(object sender, EventArgs e)
         {
-            ExitOrderButton.ForeColor = Color.Transparent;
+            ExitOrderButton.ForeColor = Color.FromArgb(34, 36, 49);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace COMP123_S2019_Assignment5B_301004138.Views
+﻿namespace DollarComputer.Views
 {
     partial class ProductInfoForm
     {
@@ -87,7 +87,7 @@
             // 
             // ProductFormMenuStrip
             // 
-            this.ProductFormMenuStrip.BackColor = System.Drawing.Color.Orange;
+            this.ProductFormMenuStrip.BackColor = System.Drawing.Color.LightBlue;
             this.ProductFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem});
@@ -115,14 +115,14 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -130,20 +130,20 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -178,7 +178,7 @@
             // ProductIDLabel
             // 
             this.ProductIDLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductIDLabel.ForeColor = System.Drawing.Color.White;
+            this.ProductIDLabel.ForeColor = System.Drawing.Color.LightBlue;
             this.ProductIDLabel.Location = new System.Drawing.Point(34, 50);
             this.ProductIDLabel.Name = "ProductIDLabel";
             this.ProductIDLabel.Size = new System.Drawing.Size(107, 21);
@@ -201,7 +201,7 @@
             // ConditionLabel
             // 
             this.ConditionLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConditionLabel.ForeColor = System.Drawing.Color.White;
+            this.ConditionLabel.ForeColor = System.Drawing.Color.LightBlue;
             this.ConditionLabel.Location = new System.Drawing.Point(377, 50);
             this.ConditionLabel.Name = "ConditionLabel";
             this.ConditionLabel.Size = new System.Drawing.Size(98, 21);
@@ -224,7 +224,7 @@
             // CostLabel
             // 
             this.CostLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CostLabel.ForeColor = System.Drawing.Color.White;
+            this.CostLabel.ForeColor = System.Drawing.Color.LightBlue;
             this.CostLabel.Location = new System.Drawing.Point(746, 50);
             this.CostLabel.Name = "CostLabel";
             this.CostLabel.Size = new System.Drawing.Size(51, 21);
@@ -255,7 +255,7 @@
             this.ProductInfoGroupBox.Controls.Add(this.ManufacturerDataLabel);
             this.ProductInfoGroupBox.Controls.Add(this.PlatFormLabel);
             this.ProductInfoGroupBox.Controls.Add(this.PlatformDataLabel);
-            this.ProductInfoGroupBox.ForeColor = System.Drawing.Color.White;
+            this.ProductInfoGroupBox.ForeColor = System.Drawing.Color.LightBlue;
             this.ProductInfoGroupBox.Location = new System.Drawing.Point(12, 139);
             this.ProductInfoGroupBox.Name = "ProductInfoGroupBox";
             this.ProductInfoGroupBox.Size = new System.Drawing.Size(984, 141);
@@ -372,7 +372,7 @@
             this.TechSpecsGroupBox.Controls.Add(this.HDDDataLabel);
             this.TechSpecsGroupBox.Controls.Add(this.LCDSizeDataLabel);
             this.TechSpecsGroupBox.Controls.Add(this.MemoryDataLabel);
-            this.TechSpecsGroupBox.ForeColor = System.Drawing.Color.White;
+            this.TechSpecsGroupBox.ForeColor = System.Drawing.Color.LightBlue;
             this.TechSpecsGroupBox.Location = new System.Drawing.Point(12, 366);
             this.TechSpecsGroupBox.Name = "TechSpecsGroupBox";
             this.TechSpecsGroupBox.Size = new System.Drawing.Size(984, 185);
@@ -580,9 +580,10 @@
             // 
             // NextButton
             // 
-            this.NextButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.NextButton.BackColor = System.Drawing.Color.LightBlue;
+            this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextButton.ForeColor = System.Drawing.Color.White;
+            this.NextButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.NextButton.Location = new System.Drawing.Point(865, 663);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(112, 54);
@@ -595,9 +596,10 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.CancelButton.BackColor = System.Drawing.Color.LightBlue;
+            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButton.ForeColor = System.Drawing.Color.White;
+            this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.CancelButton.Location = new System.Drawing.Point(715, 663);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(112, 54);
@@ -615,6 +617,7 @@
             // SelectAnotherProductButton
             // 
             this.SelectAnotherProductButton.BackColor = System.Drawing.Color.Maroon;
+            this.SelectAnotherProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SelectAnotherProductButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectAnotherProductButton.ForeColor = System.Drawing.Color.White;
             this.SelectAnotherProductButton.Location = new System.Drawing.Point(444, 663);
@@ -630,7 +633,7 @@
             // SelectConfirmLabel
             // 
             this.SelectConfirmLabel.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.SelectConfirmLabel.ForeColor = System.Drawing.Color.White;
+            this.SelectConfirmLabel.ForeColor = System.Drawing.Color.LightBlue;
             this.SelectConfirmLabel.Location = new System.Drawing.Point(24, 680);
             this.SelectConfirmLabel.Name = "SelectConfirmLabel";
             this.SelectConfirmLabel.Size = new System.Drawing.Size(336, 21);
@@ -642,7 +645,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Purple;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.ControlBox = false;
@@ -661,7 +664,7 @@
             this.Controls.Add(this.ProductFormMenuStrip);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.ProductFormMenuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -727,7 +730,7 @@
         private System.Windows.Forms.Label LCDSizeDataLabel;
         private System.Windows.Forms.Label MemoryDataLabel;
         private System.Windows.Forms.Button NextButton;
-        private System.Windows.Forms.Button CancelButton;
+        private new System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.OpenFileDialog ProductOpenFileDialog;
         private System.Windows.Forms.SaveFileDialog ProductSaveFileDialog;
         private System.Windows.Forms.Button SelectAnotherProductButton;

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP123-S2019-Assignment5B-301004138", "COMP123-S2019-Assignment5B-301004138\COMP123-S2019-Assignment5B-301004138.csproj", "{7220FC60-5607-4EB1-A815-040B27F2DA68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DollarComputer", "COMP123-S2019-Assignment5B-301004138\DollarComputer.csproj", "{7220FC60-5607-4EB1-A815-040B27F2DA68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

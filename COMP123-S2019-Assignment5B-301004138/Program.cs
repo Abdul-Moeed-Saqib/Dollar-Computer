@@ -1,12 +1,12 @@
-﻿using COMP123_S2019_Assignment5B_301004138.Data;
-using COMP123_S2019_Assignment5B_301004138.Views;
+﻿using DollarComputer.Data;
+using DollarComputer.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace COMP123_S2019_Assignment5B_301004138
+namespace DollarComputer
 {
     public static class Program
     {

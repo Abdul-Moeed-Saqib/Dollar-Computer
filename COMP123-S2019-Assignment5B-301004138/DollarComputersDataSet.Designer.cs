@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace COMP123_S2019_Assignment5B_301004138 {
+namespace DollarComputer {
     
     
     /// <summary>
@@ -1914,7 +1914,7 @@ namespace COMP123_S2019_Assignment5B_301004138 {
         }
     }
 }
-namespace COMP123_S2019_Assignment5B_301004138.DollarComputersDataSetTableAdapters {
+namespace DollarComputer.DollarComputersDataSetTableAdapters {
     
     
     /// <summary>
@@ -2351,7 +2351,7 @@ SELECT productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype, sc
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::COMP123_S2019_Assignment5B_301004138.Properties.Settings.Default.DollarComputersConnectionString;
+            this._connection.ConnectionString = global::DollarComputer.Properties.Settings.Default.DollarComputersConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

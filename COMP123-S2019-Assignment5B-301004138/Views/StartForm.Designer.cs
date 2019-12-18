@@ -1,4 +1,4 @@
-﻿namespace COMP123_S2019_Assignment5B_301004138.Views
+﻿namespace DollarComputer.Views
 {
     partial class StartForm
     {
@@ -42,7 +42,7 @@
             // 
             this.WelcomeLabel.AutoSize = true;
             this.WelcomeLabel.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeLabel.ForeColor = System.Drawing.Color.White;
+            this.WelcomeLabel.ForeColor = System.Drawing.Color.LightBlue;
             this.WelcomeLabel.Location = new System.Drawing.Point(12, 17);
             this.WelcomeLabel.Name = "WelcomeLabel";
             this.WelcomeLabel.Size = new System.Drawing.Size(285, 24);
@@ -51,9 +51,10 @@
             // 
             // StartOrderButton
             // 
-            this.StartOrderButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.StartOrderButton.BackColor = System.Drawing.Color.LightBlue;
+            this.StartOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StartOrderButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.StartOrderButton.ForeColor = System.Drawing.Color.White;
+            this.StartOrderButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.StartOrderButton.Location = new System.Drawing.Point(64, 233);
             this.StartOrderButton.Name = "StartOrderButton";
             this.StartOrderButton.Size = new System.Drawing.Size(172, 34);
@@ -66,9 +67,9 @@
             // 
             // LoadSavedButton
             // 
-            this.LoadSavedButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.LoadSavedButton.BackColor = System.Drawing.Color.LightBlue;
             this.LoadSavedButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.LoadSavedButton.ForeColor = System.Drawing.Color.White;
+            this.LoadSavedButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.LoadSavedButton.Location = new System.Drawing.Point(64, 276);
             this.LoadSavedButton.Name = "LoadSavedButton";
             this.LoadSavedButton.Size = new System.Drawing.Size(172, 34);
@@ -82,9 +83,9 @@
             // 
             // ExitOrderButton
             // 
-            this.ExitOrderButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.ExitOrderButton.BackColor = System.Drawing.Color.LightBlue;
             this.ExitOrderButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.ExitOrderButton.ForeColor = System.Drawing.Color.White;
+            this.ExitOrderButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ExitOrderButton.Location = new System.Drawing.Point(64, 317);
             this.ExitOrderButton.Name = "ExitOrderButton";
             this.ExitOrderButton.Size = new System.Drawing.Size(172, 34);
@@ -102,7 +103,7 @@
             // 
             // DollarComputerLogoPictureBox
             // 
-            this.DollarComputerLogoPictureBox.Image = global::COMP123_S2019_Assignment5B_301004138.Properties.Resources.DollarComputerLogoReal;
+            this.DollarComputerLogoPictureBox.Image = global::DollarComputer.Properties.Resources.DollarComputerLogoReal;
             this.DollarComputerLogoPictureBox.Location = new System.Drawing.Point(33, 44);
             this.DollarComputerLogoPictureBox.Name = "DollarComputerLogoPictureBox";
             this.DollarComputerLogoPictureBox.Size = new System.Drawing.Size(241, 183);
@@ -114,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Purple;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(304, 361);
             this.ControlBox = false;
             this.Controls.Add(this.ExitOrderButton);
@@ -123,7 +124,7 @@
             this.Controls.Add(this.WelcomeLabel);
             this.Controls.Add(this.DollarComputerLogoPictureBox);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StartForm";

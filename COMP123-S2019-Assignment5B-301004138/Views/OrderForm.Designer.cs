@@ -1,4 +1,4 @@
-﻿namespace COMP123_S2019_Assignment5B_301004138.Views
+﻿namespace DollarComputer.Views
 {
     partial class OrderForm
     {
@@ -785,7 +785,7 @@
         private System.Windows.Forms.Label ConditionDataLabel;
         private System.Windows.Forms.Label ConditionLabel;
         private System.Windows.Forms.Button FinishButton;
-        private System.Windows.Forms.Button CancelButton;
+        private new System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.GroupBox PriceGroupBox;
         private System.Windows.Forms.Label TotalPriceLabel;

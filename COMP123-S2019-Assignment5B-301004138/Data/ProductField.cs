@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace COMP123_S2019_Assignment5B_301004138.Data
+namespace DollarComputer.Data
 {
     public enum ProductField
     {
