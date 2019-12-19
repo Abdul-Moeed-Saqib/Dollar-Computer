@@ -94,7 +94,7 @@
             // 
             // OrderFormMenuStrip
             // 
-            this.OrderFormMenuStrip.BackColor = System.Drawing.Color.Orange;
+            this.OrderFormMenuStrip.BackColor = System.Drawing.Color.LightBlue;
             this.OrderFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
@@ -127,7 +127,7 @@
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
@@ -140,7 +140,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -498,7 +498,7 @@
             this.SystemComponentsGroupBox.Controls.Add(this.OSLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.ModelLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.shapeContainer1);
-            this.SystemComponentsGroupBox.ForeColor = System.Drawing.Color.White;
+            this.SystemComponentsGroupBox.ForeColor = System.Drawing.Color.LightBlue;
             this.SystemComponentsGroupBox.Location = new System.Drawing.Point(12, 45);
             this.SystemComponentsGroupBox.Name = "SystemComponentsGroupBox";
             this.SystemComponentsGroupBox.Size = new System.Drawing.Size(577, 601);
@@ -550,9 +550,9 @@
             // 
             // FinishButton
             // 
-            this.FinishButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.FinishButton.BackColor = System.Drawing.Color.LightBlue;
             this.FinishButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinishButton.ForeColor = System.Drawing.Color.White;
+            this.FinishButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.FinishButton.Location = new System.Drawing.Point(871, 663);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(112, 54);
@@ -560,12 +560,14 @@
             this.FinishButton.Text = "Finish";
             this.FinishButton.UseVisualStyleBackColor = false;
             this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
+            this.FinishButton.MouseLeave += new System.EventHandler(this.FinishButton_MouseLeave);
+            this.FinishButton.MouseHover += new System.EventHandler(this.FinishButton_MouseHover);
             // 
             // CancelButton
             // 
-            this.CancelButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.CancelButton.BackColor = System.Drawing.Color.LightBlue;
             this.CancelButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButton.ForeColor = System.Drawing.Color.White;
+            this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.CancelButton.Location = new System.Drawing.Point(724, 663);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(112, 54);
@@ -573,12 +575,14 @@
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.MouseLeave += new System.EventHandler(this.CancelButton_MouseLeave);
+            this.CancelButton.MouseHover += new System.EventHandler(this.CancelButton_MouseHover);
             // 
             // BackButton
             // 
             this.BackButton.BackColor = System.Drawing.Color.Sienna;
             this.BackButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.ForeColor = System.Drawing.Color.White;
+            this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.BackButton.Location = new System.Drawing.Point(576, 663);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(112, 54);
@@ -586,6 +590,8 @@
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.BackButton.MouseLeave += new System.EventHandler(this.BackButton_MouseLeave);
+            this.BackButton.MouseHover += new System.EventHandler(this.BackButton_MouseHover);
             // 
             // PriceGroupBox
             // 
@@ -596,7 +602,7 @@
             this.PriceGroupBox.Controls.Add(this.PriceLabel);
             this.PriceGroupBox.Controls.Add(this.PriceDataLabel);
             this.PriceGroupBox.Controls.Add(this.shapeContainer2);
-            this.PriceGroupBox.ForeColor = System.Drawing.Color.White;
+            this.PriceGroupBox.ForeColor = System.Drawing.Color.LightBlue;
             this.PriceGroupBox.Location = new System.Drawing.Point(608, 250);
             this.PriceGroupBox.Name = "PriceGroupBox";
             this.PriceGroupBox.Size = new System.Drawing.Size(375, 257);
@@ -710,7 +716,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Purple;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.ControlBox = false;
             this.Controls.Add(this.PlatformPictureBox);
@@ -721,7 +727,7 @@
             this.Controls.Add(this.SystemComponentsGroupBox);
             this.Controls.Add(this.OrderFormMenuStrip);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.OrderFormMenuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);

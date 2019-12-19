@@ -198,5 +198,35 @@ namespace DollarComputer.Views
             ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
             ProductPrintForm.Print();
         }
+
+        private void FinishButton_MouseHover(object sender, EventArgs e)
+        {
+            FinishButton.ForeColor = Color.Purple;
+        }
+
+        private void FinishButton_MouseLeave(object sender, EventArgs e)
+        {
+            FinishButton.ForeColor = Color.FromArgb(34, 36, 49);
+        }
+
+        private void CancelButton_MouseHover(object sender, EventArgs e)
+        {
+            CancelButton.ForeColor = Color.Red;
+        }
+
+        private void CancelButton_MouseLeave(object sender, EventArgs e)
+        {
+            CancelButton.ForeColor = Color.FromArgb(34, 36, 49);
+        }
+
+        private void BackButton_MouseHover(object sender, EventArgs e)
+        {
+            BackButton.ForeColor = Color.LightBlue;
+        }
+
+        private void BackButton_MouseLeave(object sender, EventArgs e)
+        {
+            BackButton.ForeColor = Color.FromArgb(34, 36, 49);
+        }
     }
 }

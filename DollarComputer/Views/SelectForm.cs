@@ -156,7 +156,7 @@ namespace DollarComputer.Views
         /// <param name="e"></param>
         private void NextButton_MouseLeave(object sender, EventArgs e)
         {
-            NextButton.ForeColor = Color.Transparent;
+            NextButton.ForeColor = Color.FromArgb(34, 36, 49);
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace DollarComputer.Views
         /// <param name="e"></param>
         private void CancelButton_MouseLeave(object sender, EventArgs e)
         {
-            CancelButton.ForeColor = Color.Transparent;
+            CancelButton.ForeColor = Color.FromArgb(34, 36, 49);
         }
     }
 }
